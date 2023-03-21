@@ -1,0 +1,8 @@
+<%= form_with model: [@project, Comment.new ] do |form|%>
+    <u>Add a comment</u> <br>
+    <%= form.label "Name:"%>
+    <%= form.text_field :user_name %> <br>
+    <%= form.label "Comment:"%>
+    <%= form.text_area :content %>
+    <%= form.submit %>
+<%end%>
