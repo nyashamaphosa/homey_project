@@ -1,25 +1,14 @@
-<div id="<%= dom_id project %>">
-  <p>
-    <strong>Title:</strong>
-    <%= project.title %>
-  </p>
-
-  <p>
-    Posted <%= time_ago_in_words project.created_at %> ago
-  </p>
-
-  <p>
-    <strong><%= pluralize project.comments.count, "comment" %></strong>
-  </p>
-
-  <p>
-    <strong>Content:</strong>
-    <%= project.content %>
-  </p>
-
-  <p>
+<article id="<%= dom_id project %>">
+  <mark>
     <strong>Status:</strong>
     <%= project.status %>
-  </p>
+  </mark>
 
-</div>
+  <h4><%= project.title %></h4>
+
+  <p><%= project.content %></p>
+
+  <small>Posted <%= time_ago_in_words project.created_at %> ago</small>
+
+  <p><strong><%= pluralize project.comments.count, "comment" %></strong></p>
+</article>

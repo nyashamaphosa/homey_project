@@ -23,10 +23,8 @@
 
   <div>
     <%= form.label :status, style: "display: block" %>
-    <%= form.text_field :status %>
+    <%= form.select :status, ['In progress','Ready for review', 'Complete']%>
   </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
+  <div><%= form.submit %></div>
 <% end %>
